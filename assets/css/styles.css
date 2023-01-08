@@ -323,7 +323,8 @@ a {
 }
 
 .course-item .thumb {
-    width: 370px;
+    display: block;
+    width: 368px;
     height: 278px;
     object-fit: cover;
     border-radius: 12px 12px 0px 0px;
@@ -380,7 +381,7 @@ a {
     cursor: pointer;
 }
 
-.course-item:first-child .foot .book-btn {
+.course-item .foot .book-btn:hover {
     border: none;
     background: #ffb900;
     font-weight: 600;
