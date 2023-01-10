@@ -45,6 +45,21 @@ a {
     opacity: 0.9;
 }
 
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+
+.break-all {
+    word-break: break-all;
+}
+
 /* Header */
 .header {
     background: #fffcf4;
@@ -297,6 +312,7 @@ a {
     border-radius: 50%;
     background-color: #fff;
     color: #ffb900;
+    cursor: pointer;
 }
 
 .popular-top .control-btn:hover {
@@ -324,14 +340,15 @@ a {
 
 .course-item .thumb {
     display: block;
-    width: 368px;
+    width: calc(100% + 2px);
     height: 278px;
     object-fit: cover;
     border-radius: 12px 12px 0px 0px;
+    margin: -1px;
 }
 
 .course-item .info {
-    padding: 22px;
+    padding: 16px 22px 22px;
 }
 
 .course-item .info .head {
@@ -341,13 +358,20 @@ a {
 }
 
 .course-item .title a {
+    padding-right: 6px;
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 1.67;
     color: #171100;
 }
 
+.course-item .rating {
+    display: flex;
+    align-items: center;
+}
+
 .course-item .value {
+    margin-left: 6px;
     font-size: 1.6rem;
     color: #fea31b;
 }
@@ -457,6 +481,7 @@ a {
 }
 
 .feedback-item .content blockquote {
+    margin-left: 30px;
     font-style: italic;
     font-weight: 400;
     font-size: 2.6rem;
