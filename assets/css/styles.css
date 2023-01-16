@@ -759,6 +759,7 @@ a {
 }
 
 .footer .column .list a {
+    display: block;
     margin-top: 12px;
     font-size: 1.4rem;
     line-height: 1.86;
